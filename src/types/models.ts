@@ -1,0 +1,12 @@
+export type ClientStatus = "active" | "inactive" | "archived";
+export type ProjectStatus = "planning" | "in_progress" | "review" | "completed" | "on_hold";
+export type TaskStatus = "todo" | "in_progress" | "review" | "done";
+export type Priority = "low" | "medium" | "high" | "urgent";
+export type Profile = { id: string; full_name: string; email?: string; avatar_url?: string | null; timezone?: string; is_anonymous?: boolean };
+export type Client = { id: string; workspace_id: string; name: string; company?: string | null; email?: string | null; phone?: string | null; status: ClientStatus; notes?: string | null; created_at: string; updated_at?: string };
+export type Project = { id: string; workspace_id: string; client_id: string; name: string; description?: string | null; status: ProjectStatus; progress: number; start_date?: string | null; due_date?: string | null; created_by?: string; created_at: string; updated_at?: string; owner?: string; priority?: never };
+export type Task = { id: string; workspace_id: string; project_id: string; title: string; description?: string | null; status: TaskStatus; priority: Priority; assignee_id?: string | null; due_date?: string | null; position: number; created_by?: string; created_at: string; updated_at?: string; assignee?: string };
+export type Activity = { id: string; workspace_id: string; user_id?: string; entity_type: string; entity_id?: string; action: string; metadata?: Record<string, string>; created_at: string; user_name?: string };
+export type TeamMember = { id: string; user_id?: string; name: string; email: string; role: "owner" | "admin" | "member"; created_at: string; avatar?: string };
+export type Workspace = { id: string; name: string; owner_id?: string; is_demo: boolean; created_at?: string };
+export type WorkspaceData = { workspace: Workspace; profile: Profile; clients: Client[]; projects: Project[]; tasks: Task[]; activities: Activity[]; members: TeamMember[] };

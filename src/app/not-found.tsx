@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { Brand } from "@/components/brand";
+export default function NotFound() { return <main className="grid min-h-screen place-items-center bg-[#F7F8F5] p-6 text-center"><div><Brand className="justify-center"/><p className="mt-10 text-xs font-bold uppercase tracking-[.14em] text-[#355C45]">404</p><h1 className="mt-3 text-4xl font-bold tracking-[-.05em]">Page not found</h1><p className="mt-3 text-sm text-[#697068]">The page you were looking for isn’t available.</p><Link href="/" className="mt-6 inline-flex rounded-lg bg-[#355C45] px-4 py-2.5 text-sm font-semibold text-white">Back to ClientFlow</Link></div></main>; }
