@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ClientFlow
 
-## Getting Started
+ClientFlow is a full-stack client and project management SaaS platform designed for freelancers, agencies, consultants, and service teams.
 
-First, run the development server:
+It provides one workspace for managing clients, projects, tasks, deadlines, team activity, and delivery progress.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Client and contact management
+- Project tracking and progress monitoring
+- Task management with priorities and statuses
+- Kanban workflow board
+- Calendar and deadline tracking
+- Team workspace management
+- Reports and project insights
+- Secure user authentication
+- Anonymous demo workspace
+- Isolated multi-user workspaces
+- Responsive SaaS dashboard
+- Persistent cloud data
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js
+- TypeScript
+- React
+- Supabase
+- PostgreSQL
+- Supabase Authentication
+- Row Level Security (RLS)
+- Vercel
 
-## Learn More
+## Security
 
-To learn more about Next.js, take a look at the following resources:
+ClientFlow uses workspace-based data isolation with Supabase Row Level Security.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Each authenticated or demo user receives an isolated workspace so client, project, and task data cannot be accessed by users outside that workspace.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Demo
 
-## Deploy on Vercel
+A public demo workspace is available without requiring visitors to create an account.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The demo includes sample clients, projects, tasks, Kanban workflows, calendar events, and reports.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Status
+
+ClientFlow is a portfolio SaaS application demonstrating full-stack application development, authentication, relational data management, workspace isolation, responsive interface design, and cloud deployment.
+
+## Author
+
+Ahmed Yasin Wayrah
