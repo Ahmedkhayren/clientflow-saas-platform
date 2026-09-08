@@ -1,51 +1,154 @@
 # ClientFlow
 
-ClientFlow is a full-stack client and project management SaaS platform designed for freelancers, agencies, consultants, and service teams.
+A full-stack client and project management SaaS application built with Next.js and Supabase.
 
-It provides one workspace for managing clients, projects, tasks, deadlines, team activity, and delivery progress.
+ClientFlow is designed to help freelancers, small teams, and service businesses organize clients, projects, and day-to-day work from a clean, responsive dashboard.
+
+## Overview
+
+ClientFlow demonstrates a modern SaaS workflow combining frontend development, authentication, database integration, protected application areas, and production deployment.
+
+The project was built as a portfolio application to demonstrate practical full-stack development with a real backend rather than a static UI prototype.
 
 ## Features
 
-- Client and contact management
-- Project tracking and progress monitoring
-- Task management with priorities and statuses
-- Kanban workflow board
-- Calendar and deadline tracking
-- Team workspace management
-- Reports and project insights
-- Secure user authentication
-- Anonymous demo workspace
-- Isolated multi-user workspaces
-- Responsive SaaS dashboard
-- Persistent cloud data
+- User authentication
+- Secure sign-in and account workflow
+- Client management
+- Project management
+- Dashboard interface
+- Supabase database integration
+- Protected application routes
+- Responsive desktop and mobile layouts
+- Reusable React components
+- Form handling and data management
+- Modern SaaS user interface
+- Production deployment with Vercel
 
 ## Tech Stack
 
 - Next.js
-- TypeScript
 - React
+- TypeScript
+- Tailwind CSS
 - Supabase
 - PostgreSQL
-- Supabase Authentication
-- Row Level Security (RLS)
 - Vercel
+- Git & GitHub
+
+## Architecture
+
+ClientFlow uses Next.js for the application frontend and routing, while Supabase provides the backend services used by the application.
+
+The project separates UI components, application logic, and backend integration to keep the codebase maintainable and easier to extend.
+
+## Supabase Integration
+
+Supabase is used for:
+
+- Authentication
+- User sessions
+- Database storage
+- Client data
+- Project data
+- Application data retrieval and updates
+
+Environment variables are used for Supabase configuration so credentials are not hardcoded into the source code.
+
+## Local Development
+
+Clone the repository:
+
+```bash
+git clone <YOUR-GITHUB-REPOSITORY-URL>
+cd clientflow
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a local environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+Add your Supabase configuration to `.env.local`.
+
+Example:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+Never commit `.env.local` or private credentials to Git.
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+## Production Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+Then start the production server locally:
+
+```bash
+npm start
+```
+
+## Deployment
+
+ClientFlow is designed for deployment on Vercel.
+
+Production environment variables should be configured securely through the Vercel project settings rather than committed to the repository.
+
+## Project Purpose
+
+ClientFlow was created to demonstrate my ability to build full-stack SaaS applications with:
+
+- Next.js and React
+- TypeScript
+- Supabase backend integration
+- Authentication workflows
+- Database-driven interfaces
+- Dashboard development
+- Responsive UI development
+- Environment-variable management
+- Production deployment
+- Git and GitHub workflows
 
 ## Security
 
-ClientFlow uses workspace-based data isolation with Supabase Row Level Security.
+The repository does not include private environment variables or API secrets.
 
-Each authenticated or demo user receives an isolated workspace so client, project, and task data cannot be accessed by users outside that workspace.
-
-## Demo
-
-A public demo workspace is available without requiring visitors to create an account.
-
-The demo includes sample clients, projects, tasks, Kanban workflows, calendar events, and reports.
-
-## Project Status
-
-ClientFlow is a portfolio SaaS application demonstrating full-stack application development, authentication, relational data management, workspace isolation, responsive interface design, and cloud deployment.
+Sensitive configuration should be stored in `.env.local` during local development and configured securely in the deployment environment for production.
 
 ## Author
 
-Ahmed Yasin Wayrah
+**Ahmed Yasin**
+
+Full-Stack Web Developer focused on Next.js, React, TypeScript, Supabase, SaaS applications, and modern responsive websites.
+
+**Upwork:**  
+https://www.upwork.com/freelancers/~01200b5066e1768082
+
+## License
+
+This project is intended for portfolio and demonstration purposes.
