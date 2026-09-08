@@ -60,8 +60,8 @@ Environment variables are used for Supabase configuration so credentials are not
 Clone the repository:
 
 ```bash
-git clone <YOUR-GITHUB-REPOSITORY-URL>
-cd clientflow
+git clone https://github.com/Ahmedkhayren/clientflow-saas-platform.git
+cd clientflow-saas-platform
 ```
 
 Install dependencies:
